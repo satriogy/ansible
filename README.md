@@ -14,3 +14,6 @@ Langkah pertama pastikan anda bisa ssh tanpa password ke dalam managed node yang
 
    
 periksa file inventory.ini pastikan ip, user, dan password.
+
+langkah running
+ansible-playbook /etc/ansible/inventory.ini /et/ansible/install.yml
