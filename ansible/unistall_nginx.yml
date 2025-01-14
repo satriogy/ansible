@@ -1,0 +1,39 @@
+---
+
+- name: Uninstall Nginx
+
+  hosts: webservers
+
+  become: yes
+
+  tasks:
+
+    - name: Remove Nginx package
+
+      apt:
+
+        name: nginx
+
+        state: absent
+
+
+
+    - name: Stop Nginx service
+
+      service:
+
+        name: nginx
+
+        state: stopped
+
+
+
+    - name: Disable Nginx service
+
+      service:
+
+        name: nginx
+
+        enabled: no
+
+
